@@ -17,7 +17,7 @@
     }
   ],
   "env": {
-    "VITE_API_URL": "https://ssp-auction-backend.onrender.com",
-    "VITE_WS_URL": "wss://ssp-auction-backend.onrender.com"
+    "VITE_API_URL": "https://ssp-auction-simulator.onrender.com",
+    "VITE_WS_URL": "wss://ssp-auction-simulator.onrender.com"
   }
 }
