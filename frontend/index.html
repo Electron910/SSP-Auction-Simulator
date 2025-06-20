@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="SSP Ad Auction Simulator - A real-time programmatic advertising platform simulator" />
+    <meta name="keywords" content="SSP, Ad Tech, Programmatic Advertising, Real-time Bidding" />
+    <meta name="author" content="SSP Simulator" />
+    
+    <!-- Favicon alternatives -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="SSP Ad Auction Simulator" />
+    <meta property="og:description" content="Real-time programmatic advertising platform simulator with TypeScript" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ssp-simulator.com" />
+    
+    <!-- Preconnect to external domains for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Optional: Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <title>SSP Ad Auction Simulator</title>
+    
+    <!-- Optional: Add loading styles to prevent flash of unstyled content -->
+    <style>
+      #root {
+        min-height: 100vh;
+      }
+      
+      /* Loading spinner for initial load */
+      .initial-loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #f5f5f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      }
+      
+      .spinner {
+        width: 50px;
+        height: 50px;
+        border: 3px solid #e0e0e0;
+        border-top: 3px solid #667eea;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      /* Hide loader when app loads */
+      body.loaded .initial-loader {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Loading spinner -->
+    <div class="initial-loader" id="initial-loader">
+      <div class="spinner"></div>
+    </div>
+    
+    <!-- React root -->
+    <div id="root"></div>
+    
+    <!-- No JavaScript message -->
+    <noscript>
+      <style>
+        .initial-loader { display: none !important; }
+        .no-js-message {
+          padding: 20px;
+          text-align: center;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+      </style>
+      <div class="no-js-message">
+        <h1>JavaScript Required</h1>
+        <p>Please enable JavaScript in your browser to use the SSP Ad Auction Simulator.</p>
+      </div>
+    </noscript>
+    
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Remove loader when app starts -->
+    <script>
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          document.body.classList.add('loaded');
+        }, 100);
+      });
+    </script>
+  </body>
+</html>
