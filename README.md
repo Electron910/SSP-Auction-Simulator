@@ -208,7 +208,7 @@ The project includes comprehensive TypeScript definitions for:
 
 ## 📧 Contact
 
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter) - email@example.com
+Your Name - [Neelisetty Dhanush](neelisettydhanush456@gmail.com)
 
 Project Link: [https://github.com/yourusername/ssp-auction-simulator](https://github.com/yourusername/ssp-auction-simulator)
 
