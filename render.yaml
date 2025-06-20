@@ -1,9 +1,11 @@
 services:
   - type: web
-    name: ssp-backend
-    env: node
-    buildCommand: npm install && npm run build
-    startCommand: npm start
+    name: ssp-auction-backend
+    runtime: node
+    repo: https://github.com/Electron910/SSP-Auction-Simulator
+    rootDirectory: backend
+    buildCommand: cd backend && npm install && npm run build
+    startCommand: cd backend && npm start
     envVars:
       - key: NODE_ENV
         value: production
