@@ -9,7 +9,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://ssp-auction-backend.onrender.com/:path*"
+      "destination": "https://ssp-auction-simulator.onrender.com/:path*"
     },
     {
       "source": "/(.*)",
