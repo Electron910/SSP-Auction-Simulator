@@ -8,8 +8,13 @@ import {
   TargetingRules 
 } from '../types';
 
-const API_BASE = '/api';
+const API_BASE = import.meta.env.VITE_API_URL || '/api';
 
+// For WebSocket in useWebSocket.ts
+const wsUrl = import.meta.env.VITE_WS_URL || 
+  (window.location.protocol === 'https:' ? 'wss:' : 'ws:') + 
+  '//' + window.location.host + '/ws';
+  
 const api: AxiosInstance = axios.create({
   baseURL: API_BASE,
   headers: {
