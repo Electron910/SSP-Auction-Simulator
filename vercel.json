@@ -8,10 +8,6 @@
   "root": "frontend",
   "rewrites": [
     {
-      "source": "/api/:path*",
-      "destination": "https://ssp-auction-simulator.onrender.com/:path*"
-    },
-    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
